@@ -152,12 +152,13 @@ class _PriceAlertScreenState extends State<PriceAlertScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  _buildConnectionStatus(state),
-                  const SizedBox(height: 30),
+
                   _buildPriceDisplay(state),
                   const SizedBox(height: 30),
+                  _buildConnectionStatus(state),
+                  const SizedBox(height: 30),
                   _buildAlertInput(state),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   _buildAlertStatus(state),
                 ],
               ),
@@ -239,6 +240,9 @@ class _PriceAlertScreenState extends State<PriceAlertScreen> {
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: filter3
+        )
       ),
       color: filter3.withOpacity(0.2),
       child: Padding(
